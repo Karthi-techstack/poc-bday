@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut the Cake! 🎂</title>
+    <link rel="stylesheet" href="cake.css">
+</head>
+<body>
+    <div class="cake-container">
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+        
+        <div class="content">
+            <h1 class="cake-title">Time to Cut the Cake!</h1>
+            <p class="instruction" id="instruction">Click on the cake to cut it! 🔪</p>
+            
+            <div class="cake-wrapper" id="cakeWrapper">
+                <div class="cake" id="cake" onclick="cutCake()">
+                    <div class="plate"></div>
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+                    <div class="icing"></div>
+                    <div class="drip drip1"></div>
+                    <div class="drip drip2"></div>
+                    <div class="drip drip3"></div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="confetti-container" id="confettiContainer"></div>
+    </div>
+    
+    <script src="cake.js"></script>
+</body>
+</html>
+
