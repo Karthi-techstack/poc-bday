@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main Page Styles */
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 1s ease-in;
+}
+
+.title {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+
+.cake {
+    font-size: 5rem;
+    margin: 20px 0;
+    animation: rotate 3s ease-in-out infinite;
+}
+
+.message {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.gift-btn {
+    font-size: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+.gift-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Balloons */
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.balloon:nth-child(1) {
+    background: #ff6b6b;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+    background: #4ecdc4;
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    background: #ffe66d;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(4) {
+    background: #a8e6cf;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.balloon:nth-child(5) {
+    background: #ff8b94;
+    left: 90%;
+    animation-delay: 0.5s;
+}
+
+/* Wishes Page Styles */
+.wishes-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 40px 20px;
+}
+
+.back-btn {
+    background: rgba(255,255,255,0.3);
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.5);
+    transform: translateX(-5px);
+}
+
+.wishes-title {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin: 30px 0 50px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.wishes-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.wish-card {
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s;
+    animation: slideIn 0.5s ease-out;
+}
+
+.wish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.wish-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.wish-card p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) rotate(0deg); }
+    50% { transform: translateY(-20vh) rotate(180deg); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title { font-size: 2.5rem; }
+    .subtitle { font-size: 1.8rem; }
+    .wishes-title { font-size: 2rem; }
+    .wish-card { flex-direction: column; text-align: center; }
+}
