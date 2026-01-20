@@ -3,58 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Wishes 💝</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Birthday Wishes 🎉</title>
+    <link rel="stylesheet" href="wishes.css">
 </head>
 <body>
     <div class="wishes-container">
-        <button class="back-btn" onclick="goBack()">← Back</button>
-        
-        <h1 class="wishes-title">My Wishes For You ✨</h1>
-        
-        <div class="wishes-list">
-            <div class="wish-card">
-                <span class="wish-icon">🌟</span>
-                <p>May all your dreams come true this year</p>
+        <div class="wishes-content">
+            <div class="wish-card" id="wishCard">
+                <div class="wish-header">
+                    <span class="wish-number" id="wishNumber">1 / 5</span>
+                </div>
+                <div class="wish-message" id="wishMessage"></div>
+                <div class="wish-sender" id="wishSender"></div>
             </div>
             
-            <div class="wish-card">
-                <span class="wish-icon">💖</span>
-                <p>Wishing you endless happiness and love</p>
-            </div>
-            
-            <div class="wish-card">
-                <span class="wish-icon">🌈</span>
-                <p>May your life be filled with beautiful moments</p>
-            </div>
-            
-            <div class="wish-card">
-                <span class="wish-icon">✨</span>
-                <p>Hope this year brings you success in everything you do</p>
-            </div>
-            
-            <div class="wish-card">
-                <span class="wish-icon">🎊</span>
-                <p>May you always find reasons to smile</p>
-            </div>
-            
-            <div class="wish-card">
-                <span class="wish-icon">💫</span>
-                <p>Wishing you health, wealth, and prosperity</p>
-            </div>
-            
-            <div class="wish-card">
-                <span class="wish-icon">🌸</span>
-                <p>May you be blessed with amazing adventures</p>
-            </div>
-            
-            <div class="wish-card">
-                <span class="wish-icon">💝</span>
-                <p>You deserve all the wonderful things life has to offer</p>
-            </div>
+            <button class="next-button" id="nextButton">Next →</button>
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="wishes.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@ function cutCake() {
     setTimeout(() => {
         createCakeExplosion();
         createConfetti();
+        createBalloons();
     }, 500);
     
     // Redirect to tree page after 10 seconds from cake cut
@@ -84,5 +85,41 @@ function createConfetti() {
                 confetti.remove();
             }, 5000);
         }, i * 15);
+    }
+}
+
+function createBalloons() {
+    const container = document.getElementById('balloonsContainer');
+    const balloonColors = ['balloon-red', 'balloon-blue', 'balloon-yellow', 'balloon-green', 'balloon-pink', 'balloon-purple'];
+    const numberOfBalloons = 20;
+    
+    for (let i = 0; i < numberOfBalloons; i++) {
+        setTimeout(() => {
+            const balloon = document.createElement('div');
+            balloon.className = `balloon ${balloonColors[Math.floor(Math.random() * balloonColors.length)]}`;
+            
+            // Random horizontal position
+            const startX = Math.random() * 100;
+            balloon.style.left = `${startX}%`;
+            
+            // Random drift
+            const drift = (Math.random() - 0.5) * 200;
+            balloon.style.setProperty('--drift', `${drift}px`);
+            
+            // Random duration
+            const duration = 5 + Math.random() * 3;
+            balloon.style.animationDuration = `${duration}s`;
+            
+            // Random delay
+            const delay = Math.random() * 1;
+            balloon.style.animationDelay = `${delay}s`;
+            
+            container.appendChild(balloon);
+            
+            // Remove balloon after animation
+            setTimeout(() => {
+                balloon.remove();
+            }, (duration + delay) * 1000);
+        }, i * 150);
     }
 }

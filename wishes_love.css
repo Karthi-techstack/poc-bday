@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #660099 100%);
+}
+
+.love-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #660099 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating hearts background */
+.hearts-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: float-heart 8s ease-in infinite;
+}
+
+@keyframes float-heart {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.love-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.love-title {
+    color: #ff69b4;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 0 0 60px rgba(255, 20, 147, 0.3);
+    letter-spacing: 3px;
+    animation: titleGlow 2s ease-in-out infinite;
+    font-weight: normal;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 0 0 60px rgba(255, 20, 147, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(255, 105, 180, 0.8), 0 0 80px rgba(255, 20, 147, 0.6);
+    }
+}
+
+.love-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 105, 180, 0.3);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(255, 105, 180, 0.1);
+    animation: cardSlideIn 0.8s ease-out;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.love-card::before {
+    content: '💕';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    animation: heartBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.love-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 105, 180, 0.2);
+}
+
+.love-badge {
+    font-size: 2rem;
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.love-counter {
+    color: #ff69b4;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.love-message-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.love-message {
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 2;
+    font-style: italic;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    word-wrap: break-word;
+    white-space: normal;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.love-message::-webkit-scrollbar {
+    width: 6px;
+}
+
+.love-message::-webkit-scrollbar-track {
+    background: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+}
+
+.love-message::-webkit-scrollbar-thumb {
+    background: rgba(255, 105, 180, 0.5);
+    border-radius: 10px;
+}
+
+.love-footer {
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 105, 180, 0.2);
+}
+
+.love-sender {
+    font-size: 1.2rem;
+    color: #ffb6d9;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.prev-button,
+.next-button {
+    padding: 14px 35px;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.6);
+}
+
+.prev-button:active,
+.next-button:active {
+    transform: translateY(-1px);
+}
+
+.prev-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .love-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .love-card {
+        padding: 35px 25px;
+        min-height: 400px;
+    }
+    
+    .love-message {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .love-sender {
+        font-size: 1rem;
+    }
+    
+    .button-container {
+        gap: 10px;
+        margin-top: 30px;
+    }
+    
+    .prev-button,
+    .next-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
