@@ -1,9 +1,6 @@
 // Birthday: January 23, 2002
 const birthDate = new Date('2002-01-23T00:00:00');
 
-// Heart colors
-const heartColors = ['❤️', '💖', '💗', '💓', '💕', '💝', '💞', '💘'];
-
 // Update counter
 function updateCounter() {
     const now = new Date();
@@ -13,46 +10,96 @@ function updateCounter() {
     document.getElementById('secondsCounter').textContent = seconds.toLocaleString();
 }
 
-// Create heart leaves in proper tree shape
-function createHeartLeaves() {
-    const leavesContainer = document.getElementById('treeLeaves');
-    const numberOfLeaves = 80; // More leaves for fuller tree
+// Create fireworks
+function createFireworks() {
+    const container = document.getElementById('fireworksContainer');
+    const colors = ['particle-red', 'particle-yellow', 'particle-blue', 'particle-green', 'particle-pink', 'particle-purple'];
     
-    // Tree shape parameters
-    const centerX = 50; // Center percentage
-    const treeTop = 15; // Top of tree
-    const treeBottom = 45; // Bottom of tree canopy
+    // Random position
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * (window.innerHeight * 0.6) + 100;
     
-    for (let i = 0; i < numberOfLeaves; i++) {
+    // Create 30 particles
+    for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = `firework-particle ${colors[Math.floor(Math.random() * colors.length)]}`;
+        
+        // Random direction
+        const angle = (Math.PI * 2 * i) / 30;
+        const velocity = 5 + Math.random() * 8;
+        const tx = Math.cos(angle) * velocity * 50;
+        const ty = Math.sin(angle) * velocity * 50;
+        
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        particle.style.setProperty('--tx', `${tx}px`);
+        particle.style.setProperty('--ty', `${ty}px`);
+        
+        container.appendChild(particle);
+        
+        setTimeout(() => particle.remove(), 1500);
+    }
+}
+
+// Create flying sky lanterns
+function createSkyLanterns() {
+    const container = document.getElementById('skyLanterns');
+    const numberOfLanterns = 3;
+    
+    for (let i = 0; i < numberOfLanterns; i++) {
         setTimeout(() => {
-            const leaf = document.createElement('span');
-            leaf.className = 'heart-leaf';
-            leaf.textContent = heartColors[Math.floor(Math.random() * heartColors.length)];
+            const lantern = document.createElement('div');
+            lantern.className = 'lantern';
             
-            // Create triangular/cone tree shape
-            const heightPercent = Math.random(); // 0 to 1, where 0 is top
-            const y = treeTop + (heightPercent * (treeBottom - treeTop));
+            // Random horizontal position with more spacing
+            const startX = Math.random() * 100;
+            lantern.style.left = `${startX}%`;
             
-            // Width increases as we go down (cone shape)
-            const maxWidth = heightPercent * 35; // Wider at bottom
-            const x = centerX + (Math.random() - 0.5) * maxWidth * 2;
+            // Larger drift (side to side movement)
+            const drift = (Math.random() - 0.5) * 500;
+            lantern.style.setProperty('--drift', `${drift}px`);
             
-            leaf.style.left = `${x}%`;
-            leaf.style.top = `${y}%`;
+            // Random animation duration (10-14 seconds)
+            const duration = 10 + Math.random() * 4;
+            lantern.style.setProperty('--duration', `${duration}s`);
             
-            leavesContainer.appendChild(leaf);
-        }, i * 80); // Stagger the appearance
+            // Random delay
+            const delay = Math.random() * 2;
+            lantern.style.animationDelay = `${delay}s`;
+            
+            // Create inner glow
+            const glow = document.createElement('div');
+            glow.className = 'lantern-glow';
+            glow.style.setProperty('--duration', `${duration}s`);
+            glow.style.animationDelay = `${delay}s`;
+            glow.style.setProperty('--drift', `${drift}px`);
+            
+            lantern.appendChild(glow);
+            container.appendChild(lantern);
+            
+            // Remove lantern after animation
+            setTimeout(() => {
+                lantern.remove();
+            }, (duration + delay) * 1000 + 500);
+        }, i * 1000); // Increased stagger from 600ms to 1000ms
     }
 }
 
 // Initialize
 updateCounter();
-setInterval(updateCounter, 1000); // Update every second
+setInterval(updateCounter, 2000); // Update every second
 
-// Start creating leaves after a short delay
-setTimeout(createHeartLeaves, 500);
+// Start creating lanterns after a short delay
+setTimeout(createSkyLanterns, 500);
 
-// Redirect to wishes page after 20 seconds
+// Create fireworks every 2 seconds
+setInterval(createFireworks, 1000);
+
+// Keep creating new lanterns every 18 seconds
+setInterval(createSkyLanterns, 18000);
+
+// Redirect to gallery page after 20 seconds
 setTimeout(() => {
-    window.location.href = 'wishes.html';
+    console.log('Redirecting to gallery.html');
+    window.location.replace('gallery.html');
 }, 20000);

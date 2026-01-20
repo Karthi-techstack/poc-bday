@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Did You Like The Gift? 🎁</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div class="feedback-container" id="feedbackContainer">
+        <!-- Question Page -->
+        <div class="feedback-content" id="questionPage">
+            <h1 class="feedback-title">Did You Like The Gift? 🎁</h1>
+            <p class="feedback-subtitle">Your feedback means everything to us!</p>
+            
+            <div class="button-group">
+                <button class="yes-button" id="yesButton">Yes! I Love It ❤️</button>
+                <button class="no-button" id="noButton">Not Really 😢</button>
+            </div>
+        </div>
+        
+        <!-- Response Page -->
+        <div class="response-content" id="responsePage" style="display: none;">
+            <div class="response-card" id="responseCard">
+                <div class="response-emoji" id="responseEmoji"></div>
+                <h2 class="response-title" id="responseTitle"></h2>
+                <p class="response-message" id="responseMessage"></p>
+                <button class="continue-button" id="continueButton">Continue →</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="feedback.js"></script>
+</body>
+</html>
