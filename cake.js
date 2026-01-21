@@ -8,7 +8,7 @@ function cutCake() {
     const instruction = document.getElementById('instruction');
     
     // Change instruction
-    instruction.textContent = '🎉 Happy Birthday! 🎉';
+    instruction.textContent = '🎉 Happy Birthday AISHWARYA ! 🎉';
     instruction.style.fontSize = '2rem';
     
     // Hide the cake slowly
