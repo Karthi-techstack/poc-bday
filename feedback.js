@@ -3,12 +3,12 @@ const responses = {
     yes: {
         emoji: '🎉',
         title: 'That\'s Wonderful! 💕',
-        message: 'Thank you so much for the love and support! We\'re thrilled you enjoyed the gift. Wishing you the most amazing birthday ever, filled with joy, laughter, and beautiful moments. Enjoy every second of your special day! 🎂✨'
+        message: 'Kumthaaaa Happy Annachiiii. Enjoy every second of your special day! 🎂✨. Meet panna wish panna nalla irukum ❤️'
     },
     no: {
         emoji: '😢',
-        title: 'We Appreciate Your Feedback! 💙',
-        message: 'Thank you for being honest with us. Your feedback helps us do better next time. Despite this, we still wish you the happiest birthday ever! May your day be filled with love, happiness, and wonderful surprises. Enjoy your special day! 🎈💕'
+        title: 'Seriiii no problem baby fix paniruom 💙',
+        message: 'Ill try my bestnext time baby. Enjoy your special day! 🎈💕. Meet panna killu vanguna panna nalla irukum 🥺'
     }
 };
 

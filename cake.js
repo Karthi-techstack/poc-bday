@@ -6,10 +6,15 @@ function cutCake() {
     
     const cake = document.getElementById('cake');
     const instruction = document.getElementById('instruction');
+    const foodAnimation = document.getElementById('foodAnimation');
     
-    // Change instruction
-    instruction.textContent = '🎉 Happy Birthday AISHWARYA ! 🎉';
+    // Show eating animation
+    foodAnimation.classList.add('active');
+    
+    // Change instruction - show birthday message
+    instruction.textContent = '';
     instruction.style.fontSize = '2rem';
+    instruction.style.color = '#fff';
     
     // Hide the cake slowly
     cake.style.opacity = '0';
@@ -22,7 +27,7 @@ function cutCake() {
         createBalloons();
     }, 500);
     
-    // Redirect to tree page after 10 seconds from cake cut
+    // Redirect to tree page after 10 seconds from cake cut (no countdown shown)
     setTimeout(() => {
         window.location.href = 'tree.html';
     }, 10000);

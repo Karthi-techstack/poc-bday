@@ -5,7 +5,7 @@ const photoUrls = [
     'image/photo11.jpg', 'image/photo12.jpg', 'image/photo13.jpg', 'image/photo14.jpg', 'image/photo15.jpg',
     'image/photo16.jpg', 'image/photo17.jpg', 'image/photo18.jpg', 'image/photo19.jpg', 'image/photo20.jpg',
     'image/photo21.jpg', 'image/photo22.jpg', 'image/photo23.jpg', 'image/photo24.jpg', 'image/photo25.jpg',
-    'image/photo26.jpg', 'image/photo27.jpg', 'image/photo28.jpg', 'image/photo29.jpg', 'image/photo-29.jpg', 'image/photo30.jpg'
+    'image/photo26.jpg', 'image/photo27.jpg', 'image/photo28.jpg', 'image/photo29.jpg', 'image/photo-29.jpg', 'image/photo30.jpg', 'image/photo31.jpg'
 ];
 
 // Pastel background colors - change every 6 images
@@ -65,6 +65,43 @@ function createFlyingMemories() {
     }
 }
 
+// Create transition effects (crackers and gift boxes)
+function createTransitionEffects() {
+    const container = document.querySelector('.gallery-container');
+    
+    // Create crackers/sparkles
+    for (let i = 0; i < 15; i++) {
+        const cracker = document.createElement('div');
+        cracker.className = 'cracker-particle';
+        cracker.textContent = ['✨', '🎉', '🎊', '💫', '⭐'][Math.floor(Math.random() * 5)];
+        
+        const startX = 50 + (Math.random() - 0.5) * 20;
+        const startY = 50 + (Math.random() - 0.5) * 20;
+        cracker.style.left = `${startX}%`;
+        cracker.style.top = `${startY}%`;
+        
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 100 + Math.random() * 200;
+        const tx = Math.cos(angle) * distance;
+        const ty = Math.sin(angle) * distance;
+        
+        cracker.style.setProperty('--tx', `${tx}px`);
+        cracker.style.setProperty('--ty', `${ty}px`);
+        
+        container.appendChild(cracker);
+        
+        setTimeout(() => cracker.remove(), 800);
+    }
+    
+    // Create gift box animation
+    const giftBox = document.createElement('div');
+    giftBox.className = 'transition-gift-box';
+    giftBox.textContent = '🎁';
+    container.appendChild(giftBox);
+    
+    setTimeout(() => giftBox.remove(), 800);
+}
+
 // Display photos one by one
 function displayNextPhoto() {
     if (currentPhotoIndex >= photoUrls.length) {
@@ -76,31 +113,42 @@ function displayNextPhoto() {
     const photoElement = document.getElementById('currentPhoto');
     const container = document.querySelector('.gallery-container');
     const titleElement = document.getElementById('galleryTitle');
+    const photoDisplay = document.querySelector('.photo-display');
     
-    // Set the photo
-    photoElement.src = photoUrls[currentPhotoIndex];
+    // Add transition animation to frame
+    photoDisplay.style.animation = 'frameTransition 0.5s ease-in-out';
     
-    // Change background color every 6 images
-    const colorIndex = Math.floor(currentPhotoIndex / 6);
-    container.style.background = pastelColors[colorIndex % pastelColors.length];
+    // Create transition effects
+    createTransitionEffects();
     
-    // Change title color to match background
-    titleElement.style.color = titleColors[colorIndex % titleColors.length];
-    titleElement.style.textShadow = `0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px ${titleColors[colorIndex % titleColors.length]}40`;
-    
-    // Create flying memories
-    createFlyingMemories();
-    
-    // Reset animation
-    photoElement.style.animation = 'none';
+    // Wait for transition, then change photo
     setTimeout(() => {
-        photoElement.style.animation = 'fadeInOut 2.5s ease-in-out forwards';
-    }, 10);
-    
-    currentPhotoIndex++;
-    
-    // Schedule next photo (2.5 seconds for animation)
-    setTimeout(displayNextPhoto, 2500);
+        // Set the photo
+        photoElement.src = photoUrls[currentPhotoIndex];
+        
+        // Change background color every 6 images
+        const colorIndex = Math.floor(currentPhotoIndex / 6);
+        container.style.background = pastelColors[colorIndex % pastelColors.length];
+        
+        // Change title color to match background
+        titleElement.style.color = titleColors[colorIndex % titleColors.length];
+        titleElement.style.textShadow = `0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px ${titleColors[colorIndex % titleColors.length]}40`;
+        
+        // Create flying memories
+        createFlyingMemories();
+        
+        // Reset animation
+        photoElement.style.animation = 'none';
+        setTimeout(() => {
+            photoElement.style.animation = 'fadeInOut 3.5s ease-in-out forwards';
+            photoDisplay.style.animation = 'frameSlideIn 0.8s ease-out 0.2s both, framePulse 2s ease-in-out infinite 1s';
+        }, 10);
+        
+        currentPhotoIndex++;
+        
+        // Schedule next photo (3.5 seconds for animation)
+        setTimeout(displayNextPhoto, 3500);
+    }, 500);
 }
 
 // Start the slideshow
