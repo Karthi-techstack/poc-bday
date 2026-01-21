@@ -2,8 +2,13 @@
 const wishes = [
 
     {
-        message: "Happpyy happpyy birthday aishhh🌻🫂 My human diary, my bestestestttttt frnd 🌎 To my forever partner in crime 😶‍🌫️you're the one makes our friendship feels like  🏡 Years may grow, but our bond only deepens—unchanged, unshaken, and forever cherished🫶🏻 Love you sooooo much and I miss you ❤️ Stay healthy, stay hopeful, and keep chasing your dreams. You deserve a life full of wellness and joy💌 ",
-        sender: " - With loveeeee Ruba😚"
+        message: `Happpyy happpyy birthday aishhh 
+         My human diary, my bestestestttttt frnd 🌎 To my forever partner in crime 😶‍🌫️you're the one makes our friendship feels like  🏡 Years may grow, but our bond only deepens—unchanged, unshaken, and forever cherished🫶🏻  `,
+        sender: " - With loveeeee Ruba 😚"
+    },
+        {
+        message: `Love you sooooo much and I miss you ❤️ Stay healthy, stay hopeful, and keep chasing your dreams. You deserve a life full of wellness and joy💌 `,
+        sender: " - With same loveeeee Ruba 😚"
     },
     {
         message: "Happy Birthday ishu live long and stay blessed stay happy with your loved one ♥️ you always stood with my when I am in low  thank you for being with me you are so lucky to have a karthi anna don't miss that person in your life don't worry about anything everything will be fine in one day ",
