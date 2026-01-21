@@ -1,5 +1,18 @@
 // Array of 5 wishes with messages and senders
 const wishes = [
+
+    {
+        message: "Happpyy happpyy birthday aishhh🌻🫂 My human diary, my bestestestttttt frnd 🌎 To my forever partner in crime 😶‍🌫️you're the one makes our friendship feels like  🏡 Years may grow, but our bond only deepens—unchanged, unshaken, and forever cherished🫶🏻 Love you sooooo much and I miss you ❤️ Stay healthy, stay hopeful, and keep chasing your dreams. You deserve a life full of wellness and joy💌 ",
+        sender: " - With loveeeee Ruba😚"
+    },
+    {
+        message: "Happy Birthday ishu live long and stay blessed stay happy with your loved one ♥️ you always stood with my when I am in low  thank you for being with me you are so lucky to have a karthi anna don't miss that person in your life don't worry about anything everything will be fine in one day ",
+        sender: " - Pavi 🌹"
+    },
+    {
+        message: "Happy Birthday ishu live long and stay blessed stay happy with your loved one ♥️ you always stood with me when I am in low.  thank you for being with me  don't worry about anything, everything will be fine in one day. you are my lucky charm love you ishu  ethavuthu nalu varutha Nala tha sollu ishu 😂 ",
+        sender: " - Once More Pavi 🌹"
+    },
     {
         message: "Happy birthday Aishu! ❤️ I wish that all your struggles and pains turn into success and make your dreams come true. With the support of your family, I wish that you will be getting married soon.",
         sender: " - Ragahvi ❤️"
@@ -21,24 +34,16 @@ const wishes = [
         sender: " - Viswa (F&IS)"
     },
     {
-        message: "Happy Birthday ishu live long and stay blessed stay happy with your loved one ♥️ you always stood with my when I am in low  thank you for being with me you are so lucky to have a karthi anna don't miss that person in your life don't worry about anything everything will be fine in one day ",
-        sender: "- Pavi 🌹"
+        message: "Happy birthday Aishu!🧿 May this year be a sophisticated blend of success and the same effortless joy we shared back then. Wishing you a year of unparalleled growth and brilliance as you navigate your mid-twenties with the grace you’ve always possessed ",
+        sender: " - With love Priya - your 11th and 12th grade bench mate ♥️"
     },
     {
-        message: "Happy Birthday ishu live long and stay blessed stay happy with your loved one ♥️ you always stood with me when I am in low.  thank you for being with me  don't worry about anything, everything will be fine in one day. you are my lucky charm love you ishu  ethavuthu nalu varutha Nala tha sollu ishu 😂 ",
-        sender: " - Once More Pavi 🌹"
+        message: "Happy birthday to my favorite partner in crime 😈. I'm so lucky to have you 🫶🏻🥰. May your birthday be filled with love, laughter, and unforgettable memories ☺️☺️☺️. Once again Happy Birthday to you Aishu......🫂🫂and have a great and successful year ahead ✨🥳",
+        sender: " - KP 😜"
     },
     {
-        message: "Happy Birthday to u aishuuu🍨 My sweet Friend May your birthday be as beautiful as you are be happy with your loved one 🫂❤️ ",
-        sender: "From Your Grandma 🌹"
-    },
-    {
-        message: "Happy Birthday to u aishuuu🍨 My sweet Friend May your birthday be as beautiful as you are be happy with your loved one 🫂❤️ ",
-        sender: "From Your Grandma 🌹"
-    },
-    {
-        message: "Happy Birthday to u aishuuu🍨 My sweet Friend May your birthday be as beautiful as you are be happy with your loved one 🫂❤️ ",
-        sender: "From Your Grandma 🌹"
+        message: " Hi Pattu.....🩵 Happy Happy Birthday chlm🥂 I hope your fine and everything  goes great ✨ Missing you a lot.. ❤️‍🩹 If you remember or miss me msg panu waiting for your text... Where ever you are your my lucky charm 🧿 as always... ✨💯 Once again Happy Birthday Pattuuu✨🩵 lovee u so soo  muchhhh and Miss uuuuu🫂 ",
+        sender: " - Janani 🤗"
     }
 ];
 

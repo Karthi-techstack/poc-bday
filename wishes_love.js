@@ -1,49 +1,27 @@
 // Array of romantic love wishes
 const loveWishes = [
     {
-        message: `My dearest Aishwarya, watching you grow into the amazing person you are today fills my heart with pride and joy.
-Every moment with you has been a blessing, and I'm so grateful for the love and laughter you bring into our lives.
-Your kindness, strength, and beautiful spirit inspire us every single day.
-Happy Birthday to my precious daughter! May this year bring you endless happiness, success, and all the love you deserve.
-You are truly special, and I wish you a day as beautiful and wonderful as you are.
-Stay blessed, stay happy, and know that you are loved beyond measure. 💕✨🌹`,
-        sender: "From Mom & Dad 🤍💙"
+        message: `Happy Birthday Wifey! 🎉🥳 You being on earth since 24 years (757366848 seconds) 🌍💕 En baby ku 24 vayasu aagirichi but still epdi thaa alaga baby mathiri irukalo pa, porumaiya iruku pa enaku 😍👶. Think pani patha nanum one decade ku meka unkuda iruthu irukan 🥰⏳.`,
+        sender: " - Ammu ❤️"
     },
     {
-        message: `Dear Aishwarya, as your sister, I've watched you grow into an incredible woman.
-You've always been there for me through thick and thin, supporting me with your love and wisdom.
-Your strength, compassion, and beautiful heart inspire me every single day.
-Thank you for being not just my sister, but my best friend and my rock.
-On your special day, I wish you all the happiness in the world.
-May this year bring you endless joy, success, and all the dreams you deserve. 💕🎉`,
-        sender: "From Your Sister 👯‍♀️"
+        message: `Happy birthday to the woman who already owns my heart ❤️ — I can’t wait to call you my wife and spend every birthday after this by your side 💍✨. Your smile lights up my life 😊☀️, may your birthday be as beautiful and full of love as you make every day for me 🌹💖. Every year with you is a gift 🎁, and I promise to cherish you today and always 🤗💕. I’m excited to build our future together 🚀❤️.`,
+        sender: " - Ammu ❤️"
     },
     {
-        message: `To the most beautiful soul I know, your presence in my life is a gift I cherish every single day.
-The way you light up every room with your smile, the way you care so deeply for those around you, 
-the way you love unconditionally - it all makes you truly extraordinary.
-On your birthday, I want you to know how much you mean to me and how grateful I am for you.
-May your day be filled with all the love, joy, and magic you deserve.
-Happy Birthday to my forever inspiration and my greatest blessing. 💕✨`,
-        sender: "From Your Best Friend 💖"
+        message: `Every year you grow stronger, more beautiful, and divinely radiant, a timeless vision that steals my soul anew 🌟😘. 
+        I thought of celebrating by holding hands ✋❤️, cheers 🥂, huggies 🤗, kiss 💋, funny 😂, irritating moments 😜, etc.! 
+        No worries, we will celebrate together soon with lot of fun and love 🎈🎊.
+        We struggled a lot to reach this destination 💪❤️. Ne nerya struggle aagi iruka, problem face pani iruka, enaku kaga nerya nerya pani iruka 🙏. 
+        Thanks a lot 🥺💝. 
+        Always ATG 51% thaa and naa 49% thaa 😇. Nerya solanum thaa, nerla soluran apo thaa good natural feelings kedaikum 🌈. 
+        Yaru una pathi sonalum think pannatha, you doing good and great thaa always 🌟👏.
+        `,
+        sender: " - Ammu ❤️"
     },
     {
-        message: `Aishwarya, you are the light of our family, the warmth in our hearts, and the joy in our souls.
-Watching you grow has been one of life's greatest pleasures, and I'm so proud of the woman you've become.
-Your love, your laughter, your kindness - these are the things that make life beautiful.
-On this special day, I wish for you all the happiness, success, and love that the world has to offer.
-May every moment of your birthday be as special as you are to all of us.
-Forever grateful for you, my dear. 💕🌹`,
-        sender: "From Grandma 👵💕"
-    },
-    {
-        message: `You are not just a friend, you are family. You are the one who stands by me, believes in me, and loves me unconditionally.
-Your friendship is a treasure, your love is pure, and your presence in my life is a blessing I never take for granted.
-Thank you for being the most amazing person, for all the memories we've created, and for the beautiful moments yet to come.
-On your birthday, I celebrate you and everything you are.
-Wishing you a day filled with love, laughter, and all the happiness your heart can hold.
-Happy Birthday to my forever friend and soulmate. 💕✨🎉`,
-        sender: "From Your Soulmate 💑"
+        message: `Soon, we will start our life happily 🏡💑.`,
+        sender: " - Ammu ❤️"
     }
 ];
 
@@ -115,8 +93,8 @@ if (nextButton) {
         currentLoveIndex++;
         
         if (currentLoveIndex >= loveWishes.length) {
-            // All love wishes shown, redirect to feedback page
-            window.location.href = 'feedback.html';
+            // All love wishes shown, redirect to gift page
+            window.location.href = 'gift.html';
             return;
         }
         

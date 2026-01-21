@@ -108,6 +108,32 @@ body {
     text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
 }
 
+/* Romantic Text */
+.romantic-text {
+    margin-top: 40px;
+    padding: 35px 45px;
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.15) 0%, rgba(255, 20, 147, 0.1) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 105, 180, 0.6);
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.romantic-text p {
+    font-family: 'Georgia', 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #ff69b4;
+    line-height: 2;
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.4), 0 0 30px rgba(255, 20, 147, 0.2);
+    letter-spacing: 0.8px;
+    word-spacing: 2px;
+}
+
 /* Sky Lanterns Container */
 .sky-lanterns {
     position: absolute;
