@@ -1,7 +1,7 @@
 // Array of romantic love wishes
 const loveWishes = [
     {
-        message: `Happy Birthday Wifey! 🎉🥳 You being on earth since 24 years (757366848 seconds) 🌍💕 En baby ku 24 vayasu aagirichi but still epdi thaa alaga baby mathiri irukalo pa, porumaiya iruku pa enaku 😍👶. Think pani patha nanum one decade ku meka unkuda iruthu irukan 🥰⏳.`,
+        message: `Happy Birthday Wifey! 🎉🥳 You being on earth since 24 years (757366848 seconds) 🌍💕 En baby ku 24 vayasu aagirichi but still epdi thaa alaga baby mathiri irukalo pa, porumaiya iruku pa enaku 😍👶. Think pani patha nanum one decade ku mela unkuda iruthu irukan 🥰⏳.`,
         sender: " - Ammu ❤️"
     },
     {
