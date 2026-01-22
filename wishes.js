@@ -23,7 +23,7 @@ const wishes = [
         sender: " - Ragahvi ❤️"
     },
     {
-        message: "Hope you are doing well... ✨ Happy Birthday my dear friend ( Aish )...✨ 😇Epaium happy iru.... Stay blessed with Lots of love and happiness and healthy iru🥰 🥳 HAPPY BIRTHDAY 🎈 AISHWARYA I miss you Aish ...🙃 So kandipa unku chance kadicha enta pesu....",
+        message: "Hello Aish, Hope you are doing well ✨ Happy Birthday my dear friend ( Aish ).✨ Namma clg starting la iruthu ipa vara we are good frnds I think so, Enkuda mostly neetha iruthuruka and namma ore bus, Pesite Jolly ya povom Athalm nala memories unkuda... 🥳 HAPPY BIRTHDAY 🎈 AISHWARYA  I miss you Aish ...🙃 ",
         sender: " - Karthika 👯"
     },
     {
@@ -49,10 +49,6 @@ const wishes = [
     {
         message: " Hi Pattu.....🩵 Happy Happy Birthday chlm🥂 I hope your fine and everything  goes great ✨ Missing you a lot.. ❤️‍🩹 If you remember or miss me msg panu waiting for your text... Where ever you are your my lucky charm 🧿 as always... ✨💯 Once again Happy Birthday Pattuuu✨🩵 lovee u so soo  muchhhh and Miss uuuuu🫂 ",
         sender: " - Janani 🤗"
-    },
-    {
-        message: " Hello Aish, Hope you are doing well ✨ Happy Birthday my dear friend ( Aish ).✨ Namma clg starting la iruthu ipa vara we are good frnds I think so, Enkuda mostly neetha iruthuruka and namma ore bus, Pesite Jolly ya povom Athalm nala memories unkuda... 🥳 HAPPY BIRTHDAY 🎈 AISHWARYA  I miss you Aish ...🙃 ",
-        sender: " - Karthika 🫶"
     }
 ];
 
